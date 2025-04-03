@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quack's Blackmarket - Trade</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(background.avif); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        header {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 10px;
+            display: block;
+            margin-left: 10px;
+        }
+
+        header a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        header a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+            padding: 0 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .trade-item {
+            border: 1px solid #ff0000;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: rgba(238, 66, 66, 0.788);
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+                1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            box-sizing: border-box;
+        }
+
+        .trade-item img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+
+        .trade-item-details {
+            flex-grow: 1;
+        }
+
+        .trade-item-details h3 {
+            margin-top: 0;
+        }
+
+        .trade-item-actions {
+            margin-left: auto;
+        }
+
+        .trade-item-actions button {
+            background-color: #b40f0f;
+            color: white;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .trade-item-actions button:hover {
+            background-color: #a01d1d;
+        }
+
+        footer {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .support-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #b40f0f;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-link:hover {
+            background-color: #a01d1d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"> <img class="logo" src="wmremove-transformed.png" alt="Quack's Blackmarket Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="announcement.html">Announcements</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="buy.html">Buy Games</a></li>
+                <li><a href="forum.html">Forum & Discussion</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+            </ul>
+        </nav>
+        <a class="support-link" href="cart.html">Cart</a>
+        <a class="support-link" href="support.html">Support</a>
+    </header>
+
+    <div class="container">
+        <div class="trade-item">
+            <img src="img1.jpg" alt="Game 1">  <div class="trade-item-details">
+                <h3>The Witcher 3</h3>  <p>View the top trending items here</p> </div>
+            <div class="trade-item-actions">
+                <button>Trade</button>
+            </div>
+        </div>
+
+        <div class="trade-item">
+            <img src="img2.jpg" alt="Game 2">  <div class="trade-item-details">
+                <h3>Apex Legends</h3>  <p>View the top trending items here</p>  </div>
+            <div class="trade-item-actions">
+                <button>Trade</button>
+            </div>
+        </div>
+
+        </div>
+
+    <footer>
+        <p>Gonzales, Carlo R. BSIT - 2E</p>
+    </footer>
+
+</body>
+</html>

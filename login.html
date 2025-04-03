@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('background.avif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+            color: white;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            background-color: #c22525;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-group button:disabled {
+            background-color: #888;
+            cursor: not-allowed;
+        }
+
+        .toggle-form {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .toggle-form a {
+            color: #c22525;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="login-username">Username</label>
+                <input type="text" id="login-username" name="login-username">
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="login-password">
+            </div>
+            <div class="form-group">
+                <button type="button" id="login-button">Login</button>
+            </div>
+            <div class="toggle-form">
+                <a href="#" id="show-signup">Sign Up</a>
+            </div>
+        </div>
+
+        <div id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" name="signup-username">
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" name="signup-password">
+            </div>
+            <div class="form-group">
+                <button type="button" id="signup-button">Sign Up</button>
+            </div>
+            <div class="toggle-form">
+                <a href="#" id="show-login">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let tus = "";
+        let tpas = "";
+        const loginForm = document.getElementById('login-form');
+        const signupForm = document.getElementById('signup-form');
+        const showSignup = document.getElementById('show-signup');
+        const showLogin = document.getElementById('show-login');
+        const loginButton = document.getElementById('login-button');
+        const signupButton = document.getElementById('signup-button');
+        const loginUsernameInput = document.getElementById('login-username');
+        const loginPasswordInput = document.getElementById('login-password');
+
+        showSignup.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginForm.style.display = 'none';
+            signupForm.style.display = 'block';
+        });
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            signupForm.style.display = 'none';
+            loginForm.style.display = 'block';
+        });
+
+        signupButton.addEventListener('click', () => {
+            tus = document.getElementById('signup-username').value;
+            tpas = document.getElementById('signup-password').value;
+
+            if (tus.length > 0 && tpas.length > 0) {
+                alert('Signup successful!');
+                signupForm.style.display = 'none';
+                loginForm.style.display = "block";
+            } else {
+                alert('Signup failed. Please fill all fields.');
+            }
+        });
+
+        loginButton.addEventListener('click', () => {
+            const username = loginUsernameInput.value;
+            const password = loginPasswordInput.value;
+
+            if (username === tus && password === tpas) {
+                window.location.href = "home.html";
+            } else {
+                alert('Login failed. Please wait 10 seconds.');
+                loginButton.disabled = true;
+                loginUsernameInput.disabled = true;
+                loginPasswordInput.disabled = true;
+                setTimeout(() => {
+                    loginButton.disabled = false;
+                    loginUsernameInput.disabled = false;
+                    loginPasswordInput.disabled = false;
+                    alert('Try again');
+                }, 10000);
+            }
+        });
+    </script>
+</body>
+</html>

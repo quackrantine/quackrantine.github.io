@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quack's Blackmarket - Announcements</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(background.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        header {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 10px;
+            display: block;
+            margin-left: 10px;
+        }
+
+        header a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        header a:hover {
+            opacity: 0.8;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+            padding: 0 10px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .announcement {
+            margin-bottom: 20px;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            background-color: rgba(238, 66, 66, 0.788);
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+                1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+            width: 80%; 
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .announcement h2 {
+            margin-top: 0;
+        }
+
+        .trade-item-actions {
+            margin-left: auto;
+        }
+
+        .trade-item-actions button {
+            background-color: #b40f0f;
+            color: white;
+            padding: 25px 60px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .trade-item-actions button:hover {
+            background-color: #a01d1d;
+        }
+
+        footer {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .support-link {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #b40f0f;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .support-link:hover {
+            background-color: #a01d1d;
+        }
+        .gamecart img{
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            max-height: 400px;
+        }
+        .image-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-right: 500px;
+        }
+
+        .image-table img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+            max-height: 400px;
+        }
+
+        .image-table td {
+            padding: 10px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"> <img class="logo" src="wmremove-transformed.png" alt="Quack's Blackmarket Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="announcement.html">Announcements</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="buy.html">Buy Games</a></li>
+                <li><a href="forum.html">Forum & Discussion</a></li>
+                <li><a href="#">Inventory</a></li>
+            </ul>
+        </nav>
+        <a class="support-link" href="#">Support</a>
+    </header>
+
+    <div class="container">
+        <div class="announcement">
+            <table class="image-table">
+                <tr>
+                    <td><a href="trade.html"><img src= "inventory.webp" alt="Announcement Image"></a>
+                        <div class="discount">Cart item 1</div>
+                    </td>
+                    <td><a href="trade.html"><img src="inventory.webp" alt="Trade Image"></a>
+                        <div class="discount">Cart item 2</div>
+                    </td>
+                
+                    <td><a href="trade.html"><img src="inventory.webp" alt="Buy Games Image"></a>
+                        <div class="discount">Cart item 3</div>
+                    </td>
+                    <td><a href="trade.html"><img src="inventory.webp" alt="Forum Image"></a>
+                        <div class="discount">Cart item 4</div>
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td><a href="review.html"><img src= "img1.jpg" alt="Announcement Image"></a>
+                        <div class="discount">Game 1</div>
+                    </td>
+                    <td><a href="review.html"><img src="img2.jpg" alt="Trade Image"></a>
+                        <div class="discount">Game 2</div>
+                    </td>
+                    <td><a href="review.html"><img src= "img3.jpg" alt="Announcement Image"></a>
+                        <div class="discount">Game 3</div>
+                    </td>
+                    <td><a href="review.html"><img src="img4.jpg_large" alt="Trade Image"></a>
+                        <div class="discount">Game 4</div>
+                    </td>
+                </tr>
+
+            </table>
+
+            </div> 
+        </div>
+            
+        </div>
+
+    <footer>
+        <p>Gonzales, Carlo R. BSIT - 2E</p>
+    </footer>
+
+</body>
+</html>
