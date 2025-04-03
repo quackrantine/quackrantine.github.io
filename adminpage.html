@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quack's Blackmarket</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-image: url(background.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center bottom;
+        }
+
+        header {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 10px;
+            display: block;
+            margin-left: 10px;
+        }
+
+        header a {
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        header a:hover {
+            opacity: 0.8;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .page-section {
+            margin-bottom: 20px;
+            border: 1px solid #ff0000;
+            padding: 10px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(255, 255, 255);
+            text-shadow: 2px 0 #000000, -2px 0 #000000, 0 2px #000000, 0 -2px #000000,
+                1px 1px #000000, -1px -1px #000000, 1px -1px #000000, -1px 1px #000000;
+            background-color: rgba(238, 66, 66, 0.788);
+            width: 300px;
+        }
+
+        footer {
+            background-color: #c22525;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .button-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .button-group a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 20px;
+            background-color: #b40f0f;
+            border: none;
+            transition: background-color 0.3s ease;
+            margin-left: 5px;
+        }
+
+        .button-group a:hover {
+            background-color: #a01d1d;
+        }
+
+        #announcements {
+            background-image: url(.jpg);
+        }
+
+        #trade {
+            background-image: url(.webp);
+        }
+
+        #buy-games {
+            background-image: url(.jpg);
+        }
+
+        #forum {
+            background-image: url(.jpg);
+        }
+
+        #inventory {
+            background-image: url(.webp);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="home.html"><img class="logo" src="wmremove-transformed.png" alt="Quack's Blackmarket Logo"></a>
+        <nav>
+            <ul>
+                <li><a href="announcement.html">Announcements</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="buy.html">Buy Games</a></li>
+                <li><a href="forum.html">Forum & Discussion</a></li>
+                <li><a href="inventory.html">Inventory</a></li>
+            </ul>
+        </nav>
+        <div class="button-group">
+            <a href="cart.html">Cart</a>
+            <a href="support.html">Support</a>
+            <a href="login.html">ADMIN</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section class="page-section" id="announcements">
+            <a href="announcement.html"><h2>Announcements</h2></a>
+            <p>Latest game updates and news will be posted here.</p>
+        </section>
+
+        <section class="page-section" id="trade">
+            <a href="trade.html"><h2>Trade</h2></a>
+            <p>Trade your games with other players.</p>
+        </section>
+
+        <section class="page-section" id="buy-games">
+            <a href="buy.html"><h2>Buy Games</h2></a>
+            <p>Purchase new and exciting games.</p>
+        </section>
+
+        <section class="page-section" id="forum">
+            <a href="forum.html"><h2>Forum & Discussion</h2></a>
+            <p>Join the community and discuss your favorite games.</p>
+        </section>
+
+        <section class="page-section" id="inventory">
+            <a href="inventory.html"><h2>Inventory</h2></a>
+            <p>Check items in your inventory</p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Gonzales, Carlo R. BSIT - 2E</p>
+    </footer>
+
+</body>
+</html>
